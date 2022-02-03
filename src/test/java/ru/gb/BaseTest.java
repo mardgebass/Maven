@@ -10,7 +10,11 @@ import org.openqa.selenium.chrome.ChromeOptions;
 
 public class BaseTest {
 
-        WebDriver webDriver;
+        protected String login = "bonita_scavo";
+        protected String password = "12280912";
+        protected static final String URL = "https://www.gastronom.ru/";
+
+        protected WebDriver webDriver;
 
         @BeforeEach
         void setUp() {
@@ -20,11 +24,11 @@ public class BaseTest {
 
                 WebDriver webDriver = WebDriverManager.chromedriver().capabilities(chromeOptions).create();
                 webDriver.manage().window().setSize(new Dimension(1300, 720));
-                webDriver.get("https://www.gastronom.ru/");
+                webDriver.get(URL);
 
         webDriver.findElement(By.xpath(".//span[contains(text(),'Вход')]")).click();
-        webDriver.findElement(By.name("Login")).sendKeys("bonita_scavo");
-        webDriver.findElement(By.name("Password")).sendKeys("12280912");
+        webDriver.findElement(By.name("Login")).sendKeys(login);
+        webDriver.findElement(By.name("Password")).sendKeys(password);
         webDriver.findElement(By.xpath(".//input[@value='ВОЙТИ']")).click();
         }
 

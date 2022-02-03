@@ -11,14 +11,10 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class LogoutTest extends BaseTest {
 
+    WebDriver webDriver;
+
     @Test
     public void logout(){
-
-        ChromeOptions chromeOptions = new ChromeOptions();
-        chromeOptions.addArguments("--blink-settings=imagesEnabled=false");
-
-        WebDriver webDriver = WebDriverManager.chromedriver().capabilities(chromeOptions).create();
-        webDriver.manage().window().setSize(new Dimension(1300, 720));
 
         webDriver.findElement(By.cssSelector(".new-user-panel__avatar_mobile-no")).click();
         webDriver.findElement(By.linkText("Выход")).click();
