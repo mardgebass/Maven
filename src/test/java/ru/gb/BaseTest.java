@@ -22,7 +22,7 @@ public class BaseTest {
                 ChromeOptions chromeOptions = new ChromeOptions();
                 chromeOptions.addArguments("--blink-settings=imagesEnabled=false");
 
-                WebDriver webDriver = WebDriverManager.chromedriver().capabilities(chromeOptions).create();
+                webDriver = WebDriverManager.chromedriver().capabilities(chromeOptions).create();
                 webDriver.manage().window().setSize(new Dimension(1300, 720));
                 webDriver.get(URL);
 

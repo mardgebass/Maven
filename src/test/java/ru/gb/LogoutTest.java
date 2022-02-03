@@ -11,8 +11,6 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class LogoutTest extends BaseTest {
 
-    WebDriver webDriver;
-
     @Test
     public void logout(){
 
