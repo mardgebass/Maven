@@ -8,9 +8,7 @@ import org.openqa.selenium.Dimension;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeOptions;
-
 import static org.assertj.core.api.Assertions.assertThat;
-
 import java.util.List;
 
 public class BookEventTest {
@@ -19,7 +17,7 @@ public class BookEventTest {
 
     @Test
     @DisplayName("Добавить мероприятие в бронирование")
-    void addEvent(){
+    void addEventTest(){
 
         ChromeOptions chromeOptions = new ChromeOptions();
         chromeOptions.addArguments("--blink-settings=imagesEnabled=false");

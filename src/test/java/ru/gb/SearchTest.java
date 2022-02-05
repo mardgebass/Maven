@@ -9,9 +9,7 @@ import org.openqa.selenium.Dimension;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeOptions;
-
 import java.util.List;
-
 import static org.assertj.core.api.Assertions.assertThat;
 
 public class SearchTest {

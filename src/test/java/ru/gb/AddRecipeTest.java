@@ -4,17 +4,14 @@ import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-
 import java.util.List;
-
 import static org.assertj.core.api.Assertions.assertThat;
 
 public class AddRecipeTest extends BaseTest {
 
     @Test
     @DisplayName("Добавить в кулинарную книгу")
-    public void addRecipe(){
+    public void addRecipeTest(){
 
     webDriver.findElement(By.xpath(".//span[@id='js-new-header__top-nav']")).click();
 
