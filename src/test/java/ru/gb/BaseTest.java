@@ -8,6 +8,8 @@ import org.openqa.selenium.Dimension;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 
+import java.util.concurrent.TimeUnit;
+
 public class BaseTest {
 
         protected String login = "bonita_scavo";
@@ -25,6 +27,8 @@ public class BaseTest {
                 webDriver = WebDriverManager.chromedriver().capabilities(chromeOptions).create();
                 webDriver.manage().window().setSize(new Dimension(1300, 720));
                 webDriver.get(URL);
+
+                webDriver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
 
         webDriver.findElement(By.xpath(".//span[contains(text(),'Вход')]")).click();
         webDriver.findElement(By.name("Login")).sendKeys(login);
