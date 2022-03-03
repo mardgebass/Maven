@@ -1,9 +1,12 @@
-package ru.gb;
+package ru.gb.norefactoring;
 
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
 import java.util.List;
 import static org.assertj.core.api.Assertions.assertThat;
 
@@ -25,7 +28,7 @@ public class AddRecipeTest extends BaseTest {
 
         webDriver.findElement(By.xpath(".//a[contains(@class, 'controller-add__cover-link')]")).click();
 
-        assertThat(webDriver.findElement(By.xpath(".//div[contains(@class, 'js-controller-add_active controller-add_active')]")));
+        new WebDriverWait(webDriver,3).until(ExpectedConditions.presenceOfElementLocated(By.xpath(".//div[contains(@class, 'js-controller-add_active controller-add_active')]")));
 
         webDriver.findElement(By.xpath(".//a[contains(@class, 'controller-add__cover-link')]")).click();
 

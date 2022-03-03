@@ -1,4 +1,4 @@
-package ru.gb;
+package ru.gb.norefactoring;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.junit.jupiter.api.DisplayName;
