@@ -18,7 +18,7 @@ public class SearchTest extends BaseTest {
                 .getHeader()
                 .search(searchRequest)
                 .chooseRubric()
-                .assertResults(searchRequest);
+                .assertResults("searchRequest");
     }
 
 }

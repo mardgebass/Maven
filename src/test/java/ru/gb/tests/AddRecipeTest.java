@@ -2,7 +2,6 @@ package ru.gb.tests;
 
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
-import ru.gb.norefactoring.BaseTest;
 import ru.gb.pages.MainPage;
 
 public class AddRecipeTest extends BaseTest {
@@ -14,6 +13,9 @@ public class AddRecipeTest extends BaseTest {
         webDriver.get(URL);
 
         new MainPage(webDriver)
+                .getHeader()
+                .clickLoginButton()
+                .login(login,password)
                 .getHeader()
                 .chooseMenu()
                 .chooseRecipe()
