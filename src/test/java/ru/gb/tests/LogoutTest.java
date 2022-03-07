@@ -25,7 +25,7 @@ public class LogoutTest {
                 .logout()
                 .getHeader()
                 .checkLogout();
-    }
+        }
 
     }
 

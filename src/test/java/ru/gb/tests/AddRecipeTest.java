@@ -8,7 +8,6 @@ import ru.gb.extensions.SelenideExtension;
 import ru.gb.pages.MainPage;
 import static com.codeborne.selenide.Selenide.page;
 
-
 @DisplayName("Добавить в кулинарную книгу")
 @ExtendWith({SelenideExtension.class})
 public class AddRecipeTest {
@@ -26,7 +25,6 @@ public class AddRecipeTest {
                 .chooseRecipe()
                 .addRecipe()
                 .checkAddingRecipe();
-
     }
 
 }

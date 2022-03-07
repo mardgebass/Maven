@@ -18,4 +18,5 @@ public class RecipePage extends BasePage{
         $x(".//a[contains(@class, 'controller-add__cover-link')]").click();
         return this;
     }
+
 }

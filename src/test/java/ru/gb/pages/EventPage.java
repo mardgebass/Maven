@@ -17,8 +17,6 @@ public class EventPage extends BasePage{
         $x(".//a[@id='jsbasket-reserv']")
                 .shouldBe(Condition.visible.because("Должа появиться корзина с добавленным мероприятием"), Duration.ofSeconds(5));
         return this;
-
     }
-
 
 }

@@ -6,5 +6,4 @@ public class BasePage {
 
     @Getter
     private Header header = new Header();
-
 }

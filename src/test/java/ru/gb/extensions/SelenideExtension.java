@@ -22,6 +22,5 @@ public class SelenideExtension implements AfterAllCallback, BeforeEachCallback {
         Selenide.open(TestConfig.testConfig.URL());
         Configuration.browser = "chrome";
         Configuration.pageLoadTimeout = 30;
-
     }
 }

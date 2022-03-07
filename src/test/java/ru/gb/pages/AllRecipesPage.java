@@ -9,4 +9,5 @@ public class AllRecipesPage extends BasePage{
         .get(1).click();
         return new RecipePage();
     }
+
 }

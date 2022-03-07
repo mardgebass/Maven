@@ -8,7 +8,6 @@ import ru.gb.extensions.SelenideExtension;
 import ru.gb.pages.AllEventsPage;
 import static com.codeborne.selenide.Selenide.page;
 
-
 @ExtendWith({SelenideExtension.class})
 public class BookEventTest {
 

@@ -9,7 +9,6 @@ public class AllEventsPage extends BasePage {
         $$x(".//div[@class='list-lessons__title']")
         .get(1).click();
         return new EventPage();
-
     }
 
 }

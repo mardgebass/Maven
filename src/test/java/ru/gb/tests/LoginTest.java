@@ -22,7 +22,6 @@ public class LoginTest {
                         .login(TestConfig.testConfig.login(),TestConfig.testConfig.password())
                         .getHeader()
                         .checkLogin();
-
         }
 
         @Test
@@ -34,7 +33,6 @@ public class LoginTest {
                         .clickLoginButton()
                         .login(TestConfig.testConfig.login(),TestConfig.testConfig.falsePassword());
                 page(LoginPage.class).checkError();
-
         }
 
 }

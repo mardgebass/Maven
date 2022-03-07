@@ -2,12 +2,7 @@ package ru.gb.pages;
 
 import com.codeborne.selenide.Condition;
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
-
 import java.time.Duration;
-
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.$x;
 
@@ -19,7 +14,6 @@ public class LoginPage extends BasePage {
         $(By.name("Password")).sendKeys(password);
         $x(".//input[@value='ВОЙТИ']").click();
         return new MainPage();
-
     }
 
     public LoginPage checkError(){
