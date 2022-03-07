@@ -1,12 +1,10 @@
 package ru.gb.pages;
 
+import io.qameta.allure.Step;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 
-import java.util.List;
-
-import static org.assertj.core.api.Assertions.assertThat;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class SearchResultsPage extends BasePage{
 
@@ -15,10 +13,10 @@ public class SearchResultsPage extends BasePage{
         super(webDriver);
     }
 
+    @Step("Клик на кнопку выход")
     public SearchResultsPage assertResults(String searchRequest){
 
-        List<WebElement> results = webDriver.findElements(By.xpath(".//a[@class='material-anons__title']"));
-        assertThat(results.contains(searchRequest));
+        assertTrue(webDriver.findElement(By.xpath(".//a[@class='material-anons__title']")).getText().contains(searchRequest));
 
     return this;
     }

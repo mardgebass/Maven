@@ -1,5 +1,6 @@
 package ru.gb.pages;
 
+import io.qameta.allure.Step;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -12,6 +13,7 @@ public class Header extends BaseView{
         super(webDriver);
     }
 
+    @Step("Клик на кнопку вход")
     public LoginPage clickLoginButton(){
 
         webDriver.findElement(By.xpath(".//span[contains(text(),'Вход')]")).click();
@@ -19,6 +21,7 @@ public class Header extends BaseView{
 
     }
 
+    @Step("Клик на кнопку выход")
     public MainPage logout() {
 
         webDriver.findElement(By.cssSelector(".new-user-panel__avatar_mobile-no")).click();
@@ -27,6 +30,7 @@ public class Header extends BaseView{
 
     }
 
+    @Step("Проверить вход в профиль")
     public MainPage checkLogin(){
 
         new WebDriverWait(webDriver,3).until(ExpectedConditions.presenceOfElementLocated(By.xpath(".//span[contains(@class, 'new-user-panel__name_with-shadow')]")));
@@ -34,13 +38,14 @@ public class Header extends BaseView{
 
     }
 
+    @Step("Проверить выход из профиля")
     public MainPage checkLogout() {
 
         new WebDriverWait(webDriver, 3).until(ExpectedConditions.presenceOfElementLocated(By.xpath(".//span[contains(text(),'Вход')]")));
         return new MainPage(webDriver);
     }
 
-
+    @Step("Кликнуть на РЕЦЕПТЫ в меню")
     public AllRecipesPage chooseMenu(){
 
         webDriver.findElement(By.xpath(".//span[@id='js-new-header__top-nav']")).click();
@@ -51,6 +56,7 @@ public class Header extends BaseView{
 
     }
 
+    @Step("Ввести и отправить поисковый запрос")
     public SearchPage search(String searchRequest){
         webDriver.findElement(By.xpath(".//input[@id='js-search-input']")).sendKeys(searchRequest);
         webDriver.findElement(By.xpath(".//input[contains(@class,'new-header__search-submit')]")).click();

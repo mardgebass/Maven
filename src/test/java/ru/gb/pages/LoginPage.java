@@ -1,5 +1,6 @@
 package ru.gb.pages;
 
+import io.qameta.allure.Step;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -11,6 +12,7 @@ public class LoginPage extends BasePage {
         super(webDriver);
     }
 
+    @Step("Войти с учетными данными в профиль")
     public MainPage login(String login, String password){
 
         webDriver.findElement(By.name("Login")).sendKeys(login);
@@ -20,6 +22,7 @@ public class LoginPage extends BasePage {
 
     }
 
+    @Step("Проверить текст ошибки входа")
     public LoginPage checkError(){
         new WebDriverWait(webDriver,3).until(ExpectedConditions.presenceOfElementLocated(By.xpath(".//div[@class='validation-summary-errors text-danger']")));
         return this;
