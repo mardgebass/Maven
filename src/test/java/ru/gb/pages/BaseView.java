@@ -10,5 +10,4 @@ public class BaseView {
         this.webDriver = webDriver;
     }
 
-
 }

@@ -13,7 +13,7 @@ public class AllEventsPage extends BasePage{
     @Step("Выбрать мероприятие")
     public EventPage selectEvent(){
         webDriver.findElements(By.xpath(".//div[@class='list-lessons__title']"))
-                .get(1).click();
+                .get(0).click();
         return new EventPage(webDriver);
 
     }

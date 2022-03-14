@@ -16,7 +16,7 @@ public class AllRecipesPage extends BasePage{
 
     @Step("Выбрать рецепт")
     public RecipePage chooseRecipe(){
-    List<WebElement> products = webDriver.findElements(By.xpath(".//article[contains(@class, 'block-anons col-sm-6 col-md-3')]"));
+    List<WebElement> products = webDriver.findElements(By.xpath(".//a[contains(@class, 'block-anons__title-link')]"));
         products.get(1).click();
         return new RecipePage(webDriver);
     }
