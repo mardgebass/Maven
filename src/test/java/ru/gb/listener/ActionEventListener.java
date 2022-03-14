@@ -8,10 +8,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.events.AbstractWebDriverEventListener;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-
 import java.io.ByteArrayInputStream;
 import java.util.Arrays;
-
 import static io.qameta.allure.Allure.step;
 
 public class ActionEventListener extends AbstractWebDriverEventListener {
@@ -47,7 +45,6 @@ public class ActionEventListener extends AbstractWebDriverEventListener {
         logger.info(actionName);
         step(actionName);
     }
-
 
     @Override
     public void onException(Throwable throwable, WebDriver driver) {
